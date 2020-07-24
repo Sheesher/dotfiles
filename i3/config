@@ -18,7 +18,7 @@
 	# autostart
 	exec --no-startup-id xsettingsd &
 	exec --no-startup-id compton 
-	exec --no-startup-id feh --bg-fill /home/ayberk/Wallpapers/big-slur.jpg
+	exec --no-startup-id feh --randomize --bg-fill /home/ayberk/Documents/Wallpapers/*
 	exec setxkbmap -layout de
 	exec setxkbmap -variant altgr-intl
 	exec --no-startup-id dunst
@@ -117,19 +117,20 @@
 	set $ws8 "8"
 	set $ws9 "9"
 	set $ws10 "10"
-
+	
+	set $feh exec --no-startup-id feh --bg-scale
 	# switch to workspace
-	bindsym $mod+1 workspace $ws1
-	bindsym $mod+2 workspace $ws2
-	bindsym $mod+3 workspace $ws3
-	bindsym $mod+4 workspace $ws4
-	bindsym $mod+5 workspace $ws5
-	bindsym $mod+6 workspace $ws6
-	bindsym $mod+7 workspace $ws7
-	bindsym $mod+8 workspace $ws8
-	bindsym $mod+9 workspace $ws9
-	bindsym $mod+0 workspace $ws10
-
+	bindsym $mod+1 workspace $ws1; $feh ~/Documents/Wallpapers/big-slur.jpg
+	bindsym $mod+2 workspace $ws2; $feh ~/Documents/Wallpapers/astronaut.png
+	bindsym $mod+3 workspace $ws3; $feh ~/Documents/Wallpapers/planets-vector.jpg
+	bindsym $mod+4 workspace $ws4; $feh ~/Documents/Wallpapers/space.png
+	bindsym $mod+5 workspace $ws5; $feh ~/Documents/Wallpapers/space.jpg
+	bindsym $mod+6 workspace $ws6; $feh ~/Documents/Wallpapers/mario.jpg
+	bindsym $mod+7 workspace $ws7; $feh ~/Documents/Wallpapers/astronaut.png
+	bindsym $mod+8 workspace $ws8; $feh ~/Documents/Wallpapers/big-slur.jpg
+	bindsym $mod+9 workspace $ws9; $feh ~/Documents/Wallpapers/space.png
+	bindsym $mod+0 workspace $ws10; $feh ~/Documents/Wallpapers/mario.jpg
+	
 	# move focused container to workspace
 	bindsym $mod+Shift+1 move container to workspace $ws1
 	bindsym $mod+Shift+2 move container to workspace $ws2
