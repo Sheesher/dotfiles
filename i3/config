@@ -13,12 +13,11 @@
 
 	# Gaps
 	for_window [class=".*"] border pixel 0
-	gaps inner 30
+	gaps inner 15
 
 	# autostart
 	exec --no-startup-id xsettingsd &
 	exec --no-startup-id compton 
-	exec --no-startup-id feh --randomize --bg-fill /home/ayberk/Documents/Wallpapers/*
 	exec setxkbmap -layout de
 	exec setxkbmap -variant altgr-intl
 	exec --no-startup-id dunst
