@@ -1,0 +1,28 @@
+xbindkeys
+export PATH="/home/ayberk/lolcat-master/bin/:$PATH"
+export PATH="/home/ayberk/flutter/bin/:$PATH"
+export PATH="/home/ayberk/android-studio/bin/:$PATH"
+neofetch | lolcat
+export ZSH="/home/ayberk/.oh-my-zsh"
+ZSH_THEME="spaceship"
+plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+	fzf
+)
+source $ZSH/oh-my-zsh.sh
+export EDITOR='nvim'
+alias android-studio="sh /home/ayberk/android-studio/bin/studio.sh"
+alias dockerPostgres="sudo docker run --rm   --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data  postgres"
+
+foo () {
+	if [ ${#${(z)BUFFER}} -eq 0 ]; then	
+		ls
+	fi
+	zle accept-line
+}
+
+zle -N foo
+
+bindkey '^M' foo
